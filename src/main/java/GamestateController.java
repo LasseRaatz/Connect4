@@ -9,4 +9,9 @@ public interface GamestateController {
      * @return true if the move is a winning move.
      */
     boolean isWinningMove(int column);
+
+    boolean isInHorizontalLine(int column);
+    boolean isInVerticalLine(int column);
+    boolean isInDownwardsDiagonalLine(int column);
+    boolean isInUpwardsDiagonalLine(int column);
 }
