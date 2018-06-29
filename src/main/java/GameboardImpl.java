@@ -26,7 +26,7 @@ public class GameboardImpl implements Gameboard {
     @Override
     public int getColumnSize(int column) {
         int row = 0;
-        while(!positionIsEmpty(column, row++));
+        while(!positionIsEmpty(column, row)) row++;
         return row;
     }
 
