@@ -12,13 +12,13 @@ class GameboardTest {
 
     @Test
     void putPegAndGetOwnerOfPeg() {
-        if (board.getNumberOfRows() < 3) throw new IllegalArgumentException("The given Gameboard does not have enough rows to be tested");
-        board.putPeg(1,board.getNumberOfColumns()-1);
-        board.putPeg(2,board.getNumberOfColumns()-1);
-        board.putPeg(1,board.getNumberOfColumns()-1);
-        assertEquals(1, board.getOwnerOfPeg(board.getNumberOfColumns()-1,0));
-        assertEquals(2, board.getOwnerOfPeg(board.getNumberOfColumns()-1,1));
-        assertEquals(1, board.getOwnerOfPeg(board.getNumberOfColumns()-1,2));
+        int column = board.getNumberOfColumns()-1;
+        for (int i = 0; i < board.getNumberOfRows()-1; i++) {
+            board.putPeg(i, column);
+        }
+        for (int i = 0; i < board.getNumberOfRows()-1; i++) {
+            assertEquals(i, board.getOwnerOfPeg(column, i));
+        }
     }
 
     @Test
