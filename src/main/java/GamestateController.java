@@ -8,5 +8,5 @@ public interface GamestateController {
      * @param column the given column number.
      * @return true if the move is a winning move.
      */
-    boolean isWinningMove(int column);
+    boolean isWinningMove(Gameboard gameboard, int column);
 }
