@@ -5,7 +5,8 @@ public interface View {
 
     /**
      * Shows the player the current state of the game.
+     * @param board the board that is shown.
      */
-    void draw();
+    void draw(Gameboard board);
 
 }
