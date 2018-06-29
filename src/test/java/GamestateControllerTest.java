@@ -58,7 +58,7 @@ class GamestateControllerTest {
         boolean expected = true;
 
         //Actual
-        boolean actual = gamestateController.isWinningMove(gameboard, 0); //TODO: Insert correct column
+        boolean actual = gamestateController.isWinningMove(0, gameboard); //TODO: Insert correct column
 
         //Assertion
         assertEquals(expected, actual);
@@ -76,7 +76,7 @@ class GamestateControllerTest {
         boolean expected = true;
 
         //Actual
-        boolean actual = gamestateController.isWinningMove(gameboard, 0); //TODO: Insert correct column
+        boolean actual = gamestateController.isWinningMove(0, gameboard); //TODO: Insert correct column
 
         //Assertion
         assertEquals(expected, actual);
@@ -94,7 +94,7 @@ class GamestateControllerTest {
         boolean expected = true;
 
         //Actual
-        boolean actual = gamestateController.isWinningMove(gameboard, 0); //TODO: Insert correct column
+        boolean actual = gamestateController.isWinningMove(0, gameboard); //TODO: Insert correct column
 
         //Assertion
         assertEquals(expected, actual);
@@ -112,7 +112,7 @@ class GamestateControllerTest {
         boolean expected = true;
 
         //Actual
-        boolean actual = gamestateController.isWinningMove(gameboard, 0); //TODO: Insert correct column
+        boolean actual = gamestateController.isWinningMove(0, gameboard); //TODO: Insert correct column
 
         //Assertion
         assertEquals(expected, actual);
@@ -130,7 +130,7 @@ class GamestateControllerTest {
         boolean expected = false;
 
         //Actual
-        boolean actual = gamestateController.isWinningMove(gameboard, 0); //TODO: Insert correct column
+        boolean actual = gamestateController.isWinningMove(0, gameboard); //TODO: Insert correct column
 
         //Assertion
         assertEquals(expected, actual);
