@@ -25,8 +25,9 @@ public class ViewASCII implements View {
     }
 
     private void printFloor(int numberOfColumns) {
+        System.out.print("-");
         for (int i = 0; i < numberOfColumns; i++) {
-            System.out.print("---");
+            System.out.print("--");
         }
     }
 
