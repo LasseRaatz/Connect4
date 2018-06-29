@@ -18,9 +18,13 @@ public class GameboardImpl implements Gameboard {
 
     @Override
     public int getOwnerOfPeg(int column, int row) throws IllegalArgumentException {
-        int owner = board[column][row];
-        if (owner == 0) throw new IllegalArgumentException("No peg at the given position");
-        return owner;
+        try {
+            int owner = board[column][row];
+            if (owner == 0) throw new IllegalArgumentException("No peg at the given position");
+            return owner;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            throw new IllegalArgumentException("Given position is outside of game board!");
+        }
     }
 
     @Override
@@ -48,8 +52,8 @@ public class GameboardImpl implements Gameboard {
         try {
             getOwnerOfPeg(column, row);
         } catch (IllegalArgumentException e) {
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 }

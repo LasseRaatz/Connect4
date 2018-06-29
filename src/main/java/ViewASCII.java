@@ -7,9 +7,10 @@ public class ViewASCII implements View {
         printSeperator();
         for (int i = board.getNumberOfRows()-1; i >= 0; i--) {
             printRow(i, board);
+            System.out.println();
             printFloor(board.getNumberOfColumns());
+            System.out.println();
         }
-        printFloor(board.getNumberOfColumns());
     }
 
     @Override
@@ -29,7 +30,7 @@ public class ViewASCII implements View {
         System.out.print("|");
         for (int column = 0; column < board.getNumberOfColumns(); column++) {
             printOwner(column, rowNumber, board);
-            System.out.println("|");
+            System.out.print("|");
         }
     }
 

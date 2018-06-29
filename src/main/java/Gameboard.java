@@ -16,7 +16,7 @@ public interface Gameboard {
      * @param row the row of the peg in the column. 0 is bottom.
      * @return the player number of the owner of the peg.
      */
-    int getOwnerOfPeg(int column, int row);
+    int getOwnerOfPeg(int column, int row) throws IllegalArgumentException;
 
     /**
      * Returns the number of pegs in a given column.
