@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ViewASCII implements View {
 
     @Override
@@ -8,6 +10,13 @@ public class ViewASCII implements View {
             printFloor(board.getNumberOfColumns());
         }
         printFloor(board.getNumberOfColumns());
+    }
+
+    @Override
+    public int getNextMoveColumn() {
+            System.out.print("<ENTER COLUMN>");
+            int input = Integer.parseInt((new Scanner(System.in)).next());
+            return input;
     }
 
     private void printSeperator() {

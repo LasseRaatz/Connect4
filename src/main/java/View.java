@@ -9,4 +9,10 @@ public interface View {
      */
     void draw(Gameboard board);
 
+    /**
+     * Gets the next move.
+     * @return the column that the next peg is thrown in.
+     */
+    int getNextMoveColumn();
+
 }
