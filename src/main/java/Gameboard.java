@@ -13,7 +13,7 @@ public interface Gameboard {
     /**
      * Get the player number of the peg in the given position of the given column.
      * @param column the column number of the given column.
-     * @param position the position of the peg in the column. 1 is bottom.
+     * @param position the position of the peg in the column. 0 is bottom.
      * @return the player number of the owner of the peg.
      */
     int getOwnerOfPeg(int column, int position);
@@ -24,4 +24,14 @@ public interface Gameboard {
      * @return the number of pegs in the given column.
      */
     int getColumnSize(int column);
+
+    /**
+     * @return the number of columns in the gameboard.
+     */
+    int getNumberOfColumns();
+
+    /**
+     * @return the number of rows in the gameboard.
+     */
+    int getNumberOfRows();
 }
